@@ -1,2 +1,2 @@
-# FlapplyPizza
+# FlapplyBrain 🧠
 A game like the Flapply Bird. I'm just trying to study more games with JS...
