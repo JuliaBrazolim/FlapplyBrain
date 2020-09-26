@@ -1,0 +1,88 @@
+body {
+    display: flex;
+    overflow: hidden;
+}
+
+.game-container {
+    width: 500px;
+    height: 730px;
+    position: absolute;
+}
+
+.sky {
+    width: 500px;
+    height: 580px;
+    position: absolute;
+    background-color:#000;
+    background-image: url('sky.jpg');
+}
+
+.ground {
+    background-image: url('bk-ground.png');
+    width: 500px;
+    height: 150px;
+    position: absolute;
+    top: 580px;
+    z-index: +1;
+}
+
+.brain, img {
+    position: absolute;
+    width: 60px;
+    height: 45px;
+    left: 130px;
+    bottom: 100px;
+}
+
+.obstaculo {
+    background-image: url('maozess.png');
+    width: 60px;
+    height: 300px;
+    position: absolute;
+}
+
+.topObstaculo {
+    background-image: url('maozess.png');
+    transform: rotate(180deg);
+    width: 60px;
+    height: 300px;
+    top:0px;
+    position: absolute;
+}
+
+@keyframes slideright {
+    from {
+        background-position: 10000%;
+    }
+    to {
+        background-position: 0%;
+    }
+  }
+  
+  @-webkit-keyframes slideright {
+    from {
+        background-position: 10000%;
+    }
+    to {
+        background-position: 0%;
+    }
+  }
+
+  .ground-container {
+      height: 150px;
+      width: 500px;
+      left: 0px;
+      position:  absolute;
+  }
+  
+  .ground-moving {
+    position: absolute;
+    top: 580px;
+    height: 150px;
+    background-image: url('bk-ground.png');
+    background-repeat: repeat-x;
+    animation: slideright 100s infinite linear;
+    -webkit-animation: slideright 100s infinite linear;
+    width: 100%;
+    z-index: +1;
+  }
